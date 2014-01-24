@@ -4,8 +4,8 @@
   "description": "Simple HTML5 Charts using the canvas element - richsilv extension",
   "keywords": ["charts"],
   "homepage": "https://github.com/richsilv/Chart.js",
-  "author": "nnnick",
-  "main": ["Chart.js"],
-  "dependencies": {
+  "git": "https://github.com/richsilv/Chart.js.git",
+  "author": "richsilv",
+  "packages": {
   }
 }
