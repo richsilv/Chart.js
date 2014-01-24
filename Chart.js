@@ -1088,7 +1088,11 @@ Chart = function(context){
 			ctx.stroke();
 			
 			
-			if (rotateLabels > 0){
+			if (rotateLabels > 45){
+				ctx.save();
+				ctx.textAlign = "center";
+			}
+			else if (rotateLabels > 0){
 				ctx.save();
 				ctx.textAlign = "right";
 			}
