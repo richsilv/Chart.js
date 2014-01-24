@@ -1098,7 +1098,7 @@ Chart = function(context){
 					ctx.translate(yAxisPosX + i*valueHop,xAxisPosY + config.scaleFontSize);
 					ctx.rotate(-(rotateLabels * (Math.PI/180)));
 					if (rotateLabels > 45)
-						ctx.translate(0, (valueHop + config.scaleFontSize) / 2);
+						ctx.translate(0, (valueHop - config.scaleFontSize) / 2);
 					ctx.fillText(data.labels[i], 0,0);
 					ctx.restore();
 				}
