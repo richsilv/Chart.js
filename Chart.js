@@ -876,13 +876,9 @@ Chart = function(context){
 			ctx.stroke();
 			
 			
-			if (rotateLabels > 45){
+			if (rotateLabels > 0){
 				ctx.save();
 				ctx.textAlign = "center";
-			}
-			else if (rotateLabels > 0){
-				ctx.save();
-				ctx.textAlign = "right";
 			}
 			else{
 				ctx.textAlign = "center";
@@ -1088,13 +1084,9 @@ Chart = function(context){
 			ctx.stroke();
 			
 			
-			if (rotateLabels > 45){
+			if (rotateLabels > 0){
 				ctx.save();
 				ctx.textAlign = "center";
-			}
-			else if (rotateLabels > 0){
-				ctx.save();
-				ctx.textAlign = "right";
 			}
 			else{
 				ctx.textAlign = "center";
@@ -1105,6 +1097,8 @@ Chart = function(context){
 				if (rotateLabels > 0){
 					ctx.translate(yAxisPosX + i*valueHop,xAxisPosY + config.scaleFontSize);
 					ctx.rotate(-(rotateLabels * (Math.PI/180)));
+					if (rotateLabels > 45)
+						ctx.translate((valueHop + config.scaleFontSize) / 2, 0);
 					ctx.fillText(data.labels[i], 0,0);
 					ctx.restore();
 				}
