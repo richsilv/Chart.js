@@ -1086,7 +1086,7 @@ Chart = function(context){
 			
 			if (rotateLabels > 0){
 				ctx.save();
-				ctx.textAlign = "center";
+				ctx.textAlign = "right";
 			}
 			else{
 				ctx.textAlign = "center";
