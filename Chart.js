@@ -779,7 +779,15 @@ window.Chart = function(context){
 					ctx.stroke();
 				}
 				cumulativeAngle += segmentAngle;
-			}			
+			}
+			ctx.font="12px Arial";
+			for (i=0; i < data.length; i++) {
+				ctx.fillStyle = data[i].color;
+				ctx.fillRect(0, (i*25), 30, 20);
+				ctx.fillStyle = "black";
+				ctx.fillText(data[i].label + ' ' + data[i].value + 'pts', 35, (i*25) + 13);
+			}
+
 		}			
 		
 		
